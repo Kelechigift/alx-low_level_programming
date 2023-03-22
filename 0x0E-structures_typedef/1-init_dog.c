@@ -1,7 +1,5 @@
-#include "myheader.h"
-#include <stdio.h>
+#include "dog.h"
 #include <stdlib.h>
-
 /**
  * init_dog - initialize variable of dog
  * @name: name of dog
@@ -12,7 +10,9 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	strcpy(d->n`ame = name);
+	if (d == NULL)
+		d = malloc(sizeof(struct dog));
+	d->name = name;
 	d->age = age;
-	strcpy(d->owner = owner);
+	d->owner = owner;
 }
